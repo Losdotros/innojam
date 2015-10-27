@@ -29,6 +29,34 @@ sap.ui.define([
 				
 			});
 		},
+		
+		onCockpit : function(event) {
+			gifPlayers.forEach(function (element ) {
+                if (element.playerName === "liveStream") {
+                	element.pause();
+                	element.load_url(animations + "/helmet.gif", function() {element.play();});
+                }
+            });
+		},
+		
+		onDrone         : function(event) {
+			gifPlayers.forEach(function (element ) {
+                if (element.playerName === "liveStream") {
+                	element.pause();
+                	element.load_url(animations + "/birdsview.gif", function() {element.play();});
+                }
+            });
+		},
+		
+		onRacecar : function(event) {
+			gifPlayers.forEach(function (element ) {
+                if (element.playerName === "liveStream") {
+                	element.pause();
+                	element.load_url(animations + "/sideview.gif", function() {element.play();});
+                }
+            });
+		},
+		
 		handleOpenDriver         : function (oEvent) {
 			var oButton = oEvent.getSource();
 			// create action sheet only once

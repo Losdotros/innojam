@@ -10,39 +10,12 @@
 		<l:HorizontalLayout class="sapUiSmallMargin"> 
 		<l:HorizontalLayout class="sapUiSmallMargin"> 
 			<l:VerticalLayout class="sapUiSmallMargin">
-				<Image src="{/images}/cockpit.png" width="128px" height="128px" press="handleOpenDriver"></Image>
-				<core:HTML content="
-		
-					&lt;br&gt;&lt;br&gt;
-					&lt;img id=&quot;cockpit&quot; src=&quot;{/images}/cockpit.png&quot; width=&quot;64&quot; height=&quot;64&quot; rel:rubbable=&quot;1&quot; /&gt;
-				
-					&lt;br&gt;
-					"></core:HTML>
-					<core:HTML content="
-		
-					&lt;br&gt;&lt;br&gt;
-					&lt;img id=&quot;drone&quot; src=&quot;{/images}/Drone.png&quot; rel:auto_play=&quot;1&quot; width=&quot;64&quot; height=&quot;64&quot; rel:rubbable=&quot;1&quot; /&gt;
-				
-					&lt;br&gt;
-					"></core:HTML>
-					<core:HTML content="
-		
-					&lt;br&gt;&lt;br&gt;
-					&lt;img id=&quot;racecar&quot; src=&quot;{/images}/racecar.png&quot; rel:auto_play=&quot;1&quot; width=&quot;64&quot; height=&quot;64&quot; rel:rubbable=&quot;1&quot; /&gt;
-				
-					&lt;br&gt;
-					"></core:HTML>
-						<core:HTML content="
-		
-					&lt;br&gt;&lt;br&gt;
-					&lt;img id=&quot;racecar&quot; src=&quot;{/images}/plus.png&quot; rel:auto_play=&quot;1&quot; width=&quot;64&quot; height=&quot;64&quot; rel:rubbable=&quot;1&quot; /&gt;
-				
-					&lt;br&gt;
-					"></core:HTML>
+				<Image src="{/images}/cockpit.png" width="64px" height="64px" press="onCockpit"></Image>
+				<Image src="{/images}/Drone.png" width="64px" height="64px" press="onDrone"></Image>
+				<Image src="{/images}/racecar.png" width="64px" height="64px" press="onRacecar"></Image>
+				<Image src="{/images}/plus.png" width="64px" height="64px"></Image>
 
 			</l:VerticalLayout>
-
-					
 				<core:HTML content="
 		
 					&lt;br&gt;&lt;br&gt;

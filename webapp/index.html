@@ -1,0 +1,42 @@
+	<!DOCTYPE html>  
+<html><head>  
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />  
+    <title>Hello World</title>  
+    <script id='sap-ui-bootstrap' 
+        src='/openui5-sdk-1.30.10/resources/sap-ui-core.js'  
+        data-sap-ui-theme='sap_bluecrystal'
+        data-sap-ui-libs='sap.ui.core, sap.ui.layout, sap.m'
+        data-sap-ui-compatVersion='edge'
+        data-sap-ui-preload='sync'>
+    </script>
+    <link href="custom.css" rel="stylesheet">
+<script>
+         
+
+            // sap.ui.layout.GridData.extend("sap.js.GridData", {
+            // })
+
+
+            var oGridTiles = new sap.m.TileContainer({    
+                tiles: [
+                    new sap.m.StandardTile({
+                        title: "TEST"
+                    // }),
+                    // new sap.m.CustomTile({
+                    //     // content: new sap.ui.core.HTML({content: '<p>Normal Tile</p>' })
+                    // }),
+                    // new sap.m.CustomTile({
+                    //     // content: new sap.ui.core.HTML({content: '<p>Normal Tile</p>' })
+                    })
+                ]
+            })
+            // var oGridTiles = new sap.m.Label({text:"test"});
+            oGridTiles.placeAt("content");
+            
+</script>
+
+</head>
+<body class='sapUiBody'>
+    <div id='content'></div>
+</body>
+</html>

@@ -1,3 +1,5 @@
+var gifPlayers=[];
+var maxDistances = {};
 sap.ui.define([
 	"sap/ui/core/mvc/Controller"
 ], function(Controller) {
@@ -16,8 +18,10 @@ sap.ui.define([
 			jQuery.sap.registerModulePath("abc", "abc"); 
 			jQuery.getScript(vendors+"/libgif.js", function() {
 			    jQuery.getScript(vendors+"/rubbable.js", function() {
-					var sup2 = new RubbableGif({ gif: document.getElementById('example2') } );
-					sup2.load();
+					var liveStream = new RubbableGif({ gif: document.getElementById('liveStream') } );
+					liveStream.load();
+					var miniMap = new RubbableGif({ gif: document.getElementById('miniMap') } );
+					miniMap.load();
 			    });
 				
 			});

@@ -9,6 +9,7 @@
 }(this, function (SuperGif) {
     var RubbableGif = function( options ) {
         var sup = new SuperGif( options );
+        gifPlayers.push(sup);
 
         var register_canvas_handers = function () {
 
@@ -33,16 +34,22 @@
             canvas.addEventListener((cantouch) ? 'touchstart' : 'mousedown', function (e) {
                 // prevent image drag (Firefox)
                 e.preventDefault();
-                if (sup.get_auto_play()) {
-                	sup.pause();
-                }
+                
+                gifPlayers.forEach(function (element ) {
+	                if (element.get_auto_play()) {
+	                	element.pause();
+	                }
+                });
 
                 var pos = (e.touches && e.touches.length > 0) ? e.touches[0] : e;
 
                 var x = (pos.layerX > 0) ? isvp(pos.layerX) : w / 2;
                 var progress = x / w;
 
-                sup.move_to( Math.floor(progress * (sup.get_length() - 1)) );
+                //sup.move_to( Math.floor(progress * (sup.get_length() - 1)) );
+                gifPlayers.forEach(function (element ) {
+                	element.move_to(Math.floor(progress * (element.get_length() - 1)));
+                });
 
                 startTime = e.timeStamp;
                 startX = isvp(pos.pageX);
@@ -51,9 +58,12 @@
             canvas.addEventListener((cantouch) ? 'touchend' : 'mouseup', function (e) {
                 startTime = 0;
                 startX = 0;
-                if (sup.get_auto_play()) {
-                	sup.play();
-                }
+                gifPlayers.forEach(function (element ) {
+	                if (element.get_auto_play()) {
+	                	element.play();
+	                }
+                });
+                
             });
 
             canvas.addEventListener((cantouch) ? 'touchmove' : 'mousemove', function (e) {
@@ -66,12 +76,15 @@
                 // allow if movement < 1 sec
                 var currentTime = e.timeStamp;
                 if (startTime !== 0 && currentDistance > maxDistance) {
-                    if (currentX < startX && sup.get_current_frame() > 0) {
-                        sup.move_relative(-1);
+                	
+                gifPlayers.forEach(function (element ) {
+                    if (currentX < startX && element.get_current_frame() > 0) {
+                        element.move_relative(-1);
                     }
-                    if (currentX > startX && sup.get_current_frame() < sup.get_length() - 1) {
-                        sup.move_relative(1);
+                    if (currentX > startX && element.get_current_frame() < element.get_length() - 1) {
+                        element.move_relative(1);
                     }
+                });
                     startTime = e.timeStamp;
                     startX = isvp(pos.pageX);
                 }

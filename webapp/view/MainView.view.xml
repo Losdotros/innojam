@@ -5,6 +5,19 @@
 			<Label text="{/title}"></Label>
 			<Button text="OK" press="onPress"></Button>
 			<core:HTML content="&lt;h1&gt;Example with controls and no auto-play&lt;/h1&gt;"></core:HTML>
+			<TileContainer
+				id="container"
+				tiles="{/TilesCollection}">
+			<StandardTile
+				icon="sap-icon://{icon}"
+				type="{type}"
+				number="{number}"
+				numberUnit="{numberUnit}"
+				title="{title}"
+				info="{info}"
+				infoState="{infoState}" />
+		</TileContainer>
+			
 		</content>
 	</Page>
 </core:View>

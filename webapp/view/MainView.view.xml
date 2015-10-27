@@ -3,6 +3,8 @@
 	<Page title="{/title}">
 		<content>
 			<Label text="{/title}"></Label>
+			<Button text="OK" press="onPress"></Button>
+			<core:HTML content="&lt;h1&gt;Example with controls and no auto-play&lt;/h1&gt;"></core:HTML>
 		</content>
 	</Page>
 </core:View>

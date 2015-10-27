@@ -9,6 +9,11 @@ sap.ui.define([
 				title:"some title"
 			});
 			this.getView().setModel(model);
+			
+			
+		},
+		onPress : function(event) {
+			sap.m.MessageToast.show("first toast");
 		}
 	});
 

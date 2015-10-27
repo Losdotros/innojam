@@ -6,12 +6,12 @@
 		showCancelButton="true"
 		placement="Bottom">
 		<buttons>
-			<Button text="Weather"  />
-			<Button text="Bla" icon="sap-icon://accept" />
-			<Button text="DANIEL RICCIARDO"  />
-			<Button text="SEBASTIAN VETTEL"  />
-			<Button text="CARLOS SAINZ"  />
-			<Button text="NICO ROSBERG" />
+			<Button text="Map" icon="sap-icon://accept" />
+			<Button text="Weather" icon="sap-icon://accept" />
+			<Button text="Speed Chart"  />
+			<Button text="Ranking"  />
+			<Button text="News Feed" icon="sap-icon://accept" />
+			<Button text="Health" icon="sap-icon://accept" />
 		</buttons>
 	</ActionSheet>
 </core:FragmentDefinition>

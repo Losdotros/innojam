@@ -1,6 +1,24 @@
 {
   "run": [
     {
+      "filePath": "/innojam/webapp/Component.js",
+      "previewMode": 1,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "ui5ActiveVersion": null,
+      "ui5VerSource": null,
+      "isDefaultVersion": 0,
+      "urlParameters": [],
+      "hashParameter": "",
+      "backendSystem": [],
+      "destBackendSystem": [],
+      "_metadata": {
+        "runnerId": "fiorirunner",
+        "id": 5910657,
+        "displayName": "New SAP Fiori Component on Sandbox"
+      }
+    },
+    {
       "filePath": "/PIC/webapp/test/index.html",
       "previewMode": 1,
       "dataMode": 1,

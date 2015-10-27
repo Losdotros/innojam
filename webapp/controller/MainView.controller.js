@@ -1,5 +1,5 @@
 var gifPlayers=[];
-var maxDistances = {};
+var animations;
 sap.ui.define([
 	"sap/ui/core/mvc/Controller"
 ], function(Controller) {
@@ -8,19 +8,20 @@ sap.ui.define([
 	return Controller.extend("com.sap.innojam.pic.controller.MainView", {
 		onInit : function(evt) {
 			var vendors=jQuery.sap.getModulePath("com.sap.innojam.pic.vendors", "");
+			animations=jQuery.sap.getModulePath("com.sap.innojam.pic.resources", "/animations");
 			var model = new sap.ui.model.json.JSONModel({
 				title:"Personalized Interactive Cockpoit",
 				images:jQuery.sap.getModulePath("com.sap.innojam.pic.resources", "/images"),
-				animations:jQuery.sap.getModulePath("com.sap.innojam.pic.resources", "/animations"),
+				animations:animations,
 				vendors:vendors
 			});
 			this.getView().setModel(model);
 			jQuery.sap.registerModulePath("abc", "abc"); 
 			jQuery.getScript(vendors+"/libgif.js", function() {
 			    jQuery.getScript(vendors+"/rubbable.js", function() {
-					var liveStream = new RubbableGif({ gif: document.getElementById('liveStream') } );
+					var liveStream = new RubbableGif({ gif: document.getElementById('liveStream') }, "liveStream");
 					liveStream.load();
-					var miniMap = new RubbableGif({ gif: document.getElementById('miniMap') } );
+					var miniMap = new RubbableGif({ gif: document.getElementById('miniMap') }, "miniMap" );
 					miniMap.load();
 			    });
 				

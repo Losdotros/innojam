@@ -7,9 +7,14 @@
         root.RubbableGif = factory(root.SuperGif);
     }
 }(this, function (SuperGif) {
-    var RubbableGif = function( options ) {
+    var RubbableGif = function( options, name ) {
+    	if(name == undefined) {
+    		name = "";
+    	}
+    	var mouseMoved = false;
         var sup = new SuperGif( options );
         gifPlayers.push(sup);
+        sup.playerName = name;
 
         var register_canvas_handers = function () {
 
@@ -21,6 +26,7 @@
             var maxTime = 1000,
             // allow movement if < 1000 ms (1 sec)
                 w = ( options.vp_w ? options.vp_w : canvas.width ),
+                h = ( options.vp_h ? options.vp_h : canvas.height ),
                 maxDistance = Math.floor(w / (sup.get_length() * 2)),
             // swipe movement of 50 pixels triggers the swipe
                 startX = 0,
@@ -34,6 +40,7 @@
             canvas.addEventListener((cantouch) ? 'touchstart' : 'mousedown', function (e) {
                 // prevent image drag (Firefox)
                 e.preventDefault();
+                mouseMoved=false;
                 
                 gifPlayers.forEach(function (element ) {
 	                if (element.get_auto_play()) {
@@ -42,7 +49,7 @@
                 });
 
                 var pos = (e.touches && e.touches.length > 0) ? e.touches[0] : e;
-
+                
                 var x = (pos.layerX > 0) ? isvp(pos.layerX) : w / 2;
                 var progress = x / w;
 
@@ -63,13 +70,25 @@
 	                	element.play();
 	                }
                 });
+                var pos = (e.touches && e.touches.length > 0) ? e.touches[0] : e;
+                if(!mouseMoved) {
+	                if (sup.playerName === "miniMap") {
+	                	//console.log(pos.layerY);
+		                gifPlayers.forEach(function (element ) {
+			                if (element.playerName === "liveStream") {
+			                	element.pause();
+			                	element.load_url(animations + "/rain_crash_2.gif", function() {element.play();});
+			                }
+		                });
+	                }
+                }
                 
             });
 
             canvas.addEventListener((cantouch) ? 'touchmove' : 'mousemove', function (e) {
                 e.preventDefault();
                 var pos = (e.touches && e.touches.length > 0) ? e.touches[0] : e;
-
+				mouseMoved=true;
                 var currentX = isvp(pos.pageX);
                 var currentDistance;
                 currentDistance = (startX === 0) ? 0 : Math.abs(currentX - startX);

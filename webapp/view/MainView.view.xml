@@ -1,6 +1,8 @@
-<core:View  height="100%" controllerName="com.sap.innojam.pic.controller.MainView" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml"
+<core:View  height="100%" width="100%" controllerName="com.sap.innojam.pic.controller.MainView" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml"
 	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout">
+
 	<Page title="Personalized Interactive Viewer">
+
 		<content>
 		
 			<Button text="Choose favorite Driver" press="handleOpenDriver"></Button>
@@ -9,42 +11,70 @@
 		<l:VerticalLayout class="sapUiSmallMargin">
 		
 		<l:HorizontalLayout class="sapUiSmallMargin"> 
+
+			<Button text="Choose your favorite driver" press="handleOpenDriver"></Button>
+			<Button text="Choose your level of interest" press="handleOpenLevel"></Button>
+
 			
+			
+			
+		<l:VerticalLayout width="15%" class="sapUiSmallMargin">
+		
 				<core:HTML content="
 		
 					&lt;br&gt;&lt;br&gt;
 					&lt;img id=&quot;liveStream&quot; src=&quot;{/animations}/pitstop.gif&quot; rel:auto_play=&quot;1&quot; width=&quot;467&quot; height=&quot;375&quot; rel:rubbable=&quot;1&quot; /&gt;
-				
 					&lt;br&gt;
 					"></core:HTML>
 				<core:HTML content="
 		
 					&lt;br&gt;&lt;br&gt;
 					&lt;img id=&quot;miniMap&quot; src=&quot;{/animations}/race_track_final.gif&quot; rel:auto_play=&quot;1&quot; width=&quot;467&quot; height=&quot;375&quot; rel:rubbable=&quot;1&quot; /&gt;
+
+					&lt;img id=&quot;miniMap&quot; src=&quot;{/animations}/random.gif&quot; rel:auto_play=&quot;1&quot; width=&quot;467&quot; height=&quot;375&quot; rel:rubbable=&quot;1&quot; /&gt;
+
 					
 					&lt;br&gt;
 					"></core:HTML>
 	
+					
+		</l:VerticalLayout>
+		
+			<l:VerticalLayout width="40%" class="sapUiSmallMargin">
 		
 				<core:HTML content="
 		
 					&lt;br&gt;&lt;br&gt;
-&lt;h1&gt;Example with controls and no auto-play&lt;/h1&gt;
-					&lt;img id=&quot;example2&quot; src=&quot;{/animations}/pitstop.gif&quot; rel:auto_play=&quot;1&quot; width=&quot;467&quot; height=&quot;375&quot; rel:rubbable=&quot;1&quot; /&gt;
+					&lt;img id=&quot;liveStream&quot; src=&quot;{/animations}/pitstop.gif&quot; rel:auto_play=&quot;1&quot; width=&quot;467&quot; height=&quot;375&quot; rel:rubbable=&quot;1&quot; /&gt;
+					&lt;img id=&quot;miniMap&quot; src=&quot;{/animations}/random.gif&quot; rel:auto_play=&quot;1&quot; width=&quot;467&quot; height=&quot;375&quot; rel:rubbable=&quot;1&quot; /&gt;
 					
 					&lt;br&gt;
 					"></core:HTML>
-						</l:HorizontalLayout>
+	
 					
-						<core:HTML content="
+		</l:VerticalLayout>
+		
+		
+			
+			
+				<l:VerticalLayout width="10%" class="sapUiSmallMargin">
+		
+				<core:HTML content="
 		
 					&lt;br&gt;&lt;br&gt;
-&lt;h1&gt;Example with controls and no auto-play&lt;/h1&gt;
-					&lt;img id=&quot;example2&quot; src=&quot;{/animations}/pitstop.gif&quot; rel:auto_play=&quot;1&quot; width=&quot;467&quot; height=&quot;375&quot; rel:rubbable=&quot;1&quot; /&gt;
+					&lt;img id=&quot;liveStream&quot; src=&quot;{/animations}/pitstop.gif&quot; rel:auto_play=&quot;1&quot; width=&quot;467&quot; height=&quot;375&quot; rel:rubbable=&quot;1&quot; /&gt;
+					&lt;img id=&quot;miniMap&quot; src=&quot;{/animations}/random.gif&quot; rel:auto_play=&quot;1&quot; width=&quot;467&quot; height=&quot;375&quot; rel:rubbable=&quot;1&quot; /&gt;
 					
 					&lt;br&gt;
 					"></core:HTML>
+	
+					
 		</l:VerticalLayout>
+		
+		
+			
+		
+		
 			
 		
 		</content>

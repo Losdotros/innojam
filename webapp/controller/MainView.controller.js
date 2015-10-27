@@ -3,14 +3,14 @@ var animations;
 sap.ui.define([
 	"sap/ui/core/mvc/Controller"
 ], function(Controller) {
-	"use strict";
+
 
 	return Controller.extend("com.sap.innojam.pic.controller.MainView", {
 		onInit : function(evt) {
 			var vendors=jQuery.sap.getModulePath("com.sap.innojam.pic.vendors", "");
 			animations=jQuery.sap.getModulePath("com.sap.innojam.pic.resources", "/animations");
 			var model = new sap.ui.model.json.JSONModel({
-				title:"some title",
+				title:"Personalized Interactive Cockpoit",
 				images:jQuery.sap.getModulePath("com.sap.innojam.pic.resources", "/images"),
 				animations:animations,
 				vendors:vendors
@@ -27,6 +27,7 @@ sap.ui.define([
 				
 			});
 		},
+
 		
 			handleOpenDriver         : function (oEvent) {
 			var oButton = oEvent.getSource();
@@ -58,7 +59,7 @@ sap.ui.define([
 			this._actionSheetLevel.openBy(oButton2);
 		},
 		
-		
+
 		onPress : function(event) {
 			sap.m.MessageToast.show("first toast");
 		}

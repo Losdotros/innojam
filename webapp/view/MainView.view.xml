@@ -1,0 +1,6 @@
+<core:View controllerName="com.sap.innojam.pic.controller.MainView" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<Page title="{i18n>title}">
+		<content></content>
+	</Page>
+</core:View>

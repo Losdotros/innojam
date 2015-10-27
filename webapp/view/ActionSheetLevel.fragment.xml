@@ -7,10 +7,10 @@
 		placement="Bottom">
 		<buttons>
 			<Button text="Map" icon="sap-icon://accept" />
-			<Button text="Weather" icon="sap-icon://accept" />
+			<Button text="Weather"  />
 			<Button text="Speed Chart"  />
 			<Button text="Ranking"   icon="sap-icon://accept"/>
-			<Button text="News Feed" icon="sap-icon://accept" />
+			<Button text="News Feed"  />
 			<Button text="Health" icon="sap-icon://accept" />
 		</buttons>
 	</ActionSheet>

@@ -6,8 +6,8 @@
 		showCancelButton="true"
 		placement="Bottom">
 		<buttons>
-			<Button text="Weather"  />
-			<Button text="Bla" icon="sap-icon://accept" />
+		<Button text="LEWIS HAMILTON"  />
+			<Button text="MAX VERSTAPPEN" icon="sap-icon://accept" />
 			<Button text="DANIEL RICCIARDO"  />
 			<Button text="SEBASTIAN VETTEL"  />
 			<Button text="CARLOS SAINZ"  />

@@ -1,9 +1,10 @@
 <core:View  height="100%" controllerName="com.sap.innojam.pic.controller.MainView" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml"
 	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout">
-	<Page title="{/title}">
+	<Page title="Personalized Interactive Viewer">
 		<content>
-			<Label text="{/title}"></Label>
-			<Button text="OK" press="onPress"></Button>
+		
+			<Button text="Choose favorite Driver" press="handleOpenDriver"></Button>
+			<Button text="Choose Level of Interest" press="handleOpenLevel"></Button>
 		
 		<l:VerticalLayout class="sapUiSmallMargin">
 		

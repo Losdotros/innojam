@@ -44,7 +44,7 @@
                 mouseMoved=false;
                 
                 gifPlayers.forEach(function (element ) {
-	                if (element.get_auto_play()) {
+	                if (element.get_auto_play()  && !element.get_loading()) {
 	                	element.pause();
 	                }
                 });
@@ -68,7 +68,7 @@
                 startTime = 0;
                 startX = 0;
                 gifPlayers.forEach(function (element ) {
-	                if (element.get_auto_play()) {
+	                if (element.get_auto_play() && !element.get_loading()) {
 	                	element.play();
 	                }
                 });
@@ -81,7 +81,7 @@
 			                gifPlayers.forEach(function (element ) {
 				                if (element.playerName === "liveStream") {
 				                	element.pause();
-				                	element.load_url(animations + "/rain_crash_2.gif", function() {element.play();});
+				                	element.load_url(animations + "/rain_crash.gif", function() {element.play();});
 				                }
 			                });
 	                	} else {
@@ -93,26 +93,7 @@
 	                		//console.log("right car");
 	                		}
 	                	}
-	                }/*else if(sup.playerName ==="cockpit"){
-	                		if(lastY < (h / 2)) {
-	                		// click on accident
-	                		console.log("accident");
-			                gifPlayers.forEach(function (element ) {
-				                if (element.playerName === "liveStream") {
-				                	element.pause();
-				                	element.load_url(animations + "/helmet.gif", function() {element.play();});
-				                }
-			                });
-	                	} else {
-	                		if(lastX < (w / 2)) {
-	                			// left car
-	                		//console.log("left car");
-	                		} else {
-	                			// right car
-	                		//console.log("right car");
-	                		}
 	                }
-                }*/
                 }
                 
             });

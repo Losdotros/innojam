@@ -1,0 +1,17 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<ActionSheet
+		title="Choose Your Action"
+		showCancelButton="true"
+		placement="Bottom">
+		<buttons>
+			<Button text="Weather"  />
+			<Button text="Bla" icon="sap-icon://accept" />
+			<Button text="DANIEL RICCIARDO"  />
+			<Button text="SEBASTIAN VETTEL"  />
+			<Button text="CARLOS SAINZ"  />
+			<Button text="NICO ROSBERG" />
+		</buttons>
+	</ActionSheet>
+</core:FragmentDefinition>

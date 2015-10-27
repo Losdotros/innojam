@@ -2,9 +2,8 @@
 	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout">
 	<Page title="{/title}">
 		<content>
-			<Label text="{/title}"></Label>
-			<Button text="OK" press="onPress"></Button>
-		
+			<Button text="Choose your favorite driver" press="handleOpen"></Button>
+			
 		<l:VerticalLayout class="sapUiSmallMargin">
 		
 		<l:HorizontalLayout class="sapUiSmallMargin"> 
@@ -13,7 +12,7 @@
 		
 					&lt;br&gt;&lt;br&gt;
 					&lt;img id=&quot;liveStream&quot; src=&quot;{/animations}/pitstop.gif&quot; rel:auto_play=&quot;1&quot; width=&quot;467&quot; height=&quot;375&quot; rel:rubbable=&quot;1&quot; /&gt;
-					&lt;img id=&quot;miniMap&quot; src=&quot;{/animations}/race_track_final.gif&quot; rel:auto_play=&quot;1&quot; width=&quot;467&quot; height=&quot;375&quot; rel:rubbable=&quot;1&quot; /&gt;
+					&lt;img id=&quot;miniMap&quot; src=&quot;{/animations}/random.gif&quot; rel:auto_play=&quot;1&quot; width=&quot;467&quot; height=&quot;375&quot; rel:rubbable=&quot;1&quot; /&gt;
 					
 					&lt;br&gt;
 					"></core:HTML>
@@ -23,7 +22,7 @@
 		
 					&lt;br&gt;&lt;br&gt;
 &lt;h1&gt;Example with controls and no auto-play&lt;/h1&gt;
-					&lt;img id=&quot;example2&quot; src=&quot;{/animations}/pitstop.gif&quot; rel:auto_play=&quot;1&quot; width=&quot;467&quot; height=&quot;375&quot; rel:rubbable=&quot;1&quot; /&gt;
+					&lt;img id=&quot;example2&quot; src=&quot;{/animations}/helmet.gif&quot; rel:auto_play=&quot;1&quot; width=&quot;467&quot; height=&quot;375&quot; rel:rubbable=&quot;1&quot; /&gt;
 					
 					&lt;br&gt;
 					"></core:HTML>

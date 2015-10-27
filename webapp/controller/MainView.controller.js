@@ -9,7 +9,7 @@ sap.ui.define([
 		onInit : function(evt) {
 			var vendors=jQuery.sap.getModulePath("com.sap.innojam.pic.vendors", "");
 			var model = new sap.ui.model.json.JSONModel({
-				title:"some title",
+				title:"Personalized Interactive Cockpoit",
 				images:jQuery.sap.getModulePath("com.sap.innojam.pic.resources", "/images"),
 				animations:jQuery.sap.getModulePath("com.sap.innojam.pic.resources", "/animations"),
 				vendors:vendors
@@ -26,6 +26,22 @@ sap.ui.define([
 				
 			});
 		},
+		handleOpen : function (oEvent) {
+			var oButton = oEvent.getSource();
+
+			// create action sheet only once
+			if (!this._actionSheet) {
+				this._actionSheet = sap.ui.xmlfragment(
+					"com.sap.innojam.pic.view.ActionSheet",
+					this
+				);
+				this.getView().addDependent(this._actionSheet);
+			}
+
+			this._actionSheet.openBy(oButton);
+		},
+			//the header menu 
+			
 		onPress : function(event) {
 			sap.m.MessageToast.show("first toast");
 		}

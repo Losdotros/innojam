@@ -8,33 +8,69 @@
 		<l:VerticalLayout class="sapUiSmallMargin">
 		
 		<l:HorizontalLayout class="sapUiSmallMargin"> 
-			
+		<l:HorizontalLayout class="sapUiSmallMargin"> 
+			<l:VerticalLayout class="sapUiSmallMargin">
 				<core:HTML content="
 		
 					&lt;br&gt;&lt;br&gt;
-					&lt;img id=&quot;liveStream&quot; src=&quot;{/animations}/pitstop.gif&quot; rel:auto_play=&quot;1&quot; width=&quot;467&quot; height=&quot;375&quot; rel:rubbable=&quot;1&quot; /&gt;
+					&lt;img id=&quot;cockpit&quot; src=&quot;{/images}/cockpit.png&quot; width=&quot;64&quot; height=&quot;64&quot; rel:rubbable=&quot;1&quot; /&gt;
 				
 					&lt;br&gt;
 					"></core:HTML>
+					<core:HTML content="
+		
+					&lt;br&gt;&lt;br&gt;
+					&lt;img id=&quot;drone&quot; src=&quot;{/images}/Drone.png&quot; rel:auto_play=&quot;1&quot; width=&quot;64&quot; height=&quot;64&quot; rel:rubbable=&quot;1&quot; /&gt;
+				
+					&lt;br&gt;
+					"></core:HTML>
+					<core:HTML content="
+		
+					&lt;br&gt;&lt;br&gt;
+					&lt;img id=&quot;racecar&quot; src=&quot;{/images}/racecar.png&quot; rel:auto_play=&quot;1&quot; width=&quot;64&quot; height=&quot;64&quot; rel:rubbable=&quot;1&quot; /&gt;
+				
+					&lt;br&gt;
+					"></core:HTML>
+						<core:HTML content="
+		
+					&lt;br&gt;&lt;br&gt;
+					&lt;img id=&quot;racecar&quot; src=&quot;{/images}/plus.png&quot; rel:auto_play=&quot;1&quot; width=&quot;64&quot; height=&quot;64&quot; rel:rubbable=&quot;1&quot; /&gt;
+				
+					&lt;br&gt;
+					"></core:HTML>
+
+			</l:VerticalLayout>
+
+					
 				<core:HTML content="
 		
 					&lt;br&gt;&lt;br&gt;
-					&lt;img id=&quot;miniMap&quot; src=&quot;{/animations}/race_track_final.gif&quot; rel:auto_play=&quot;1&quot; width=&quot;467&quot; height=&quot;375&quot; rel:rubbable=&quot;1&quot; /&gt;
+					&lt;h1&gt;Livestream&lt;/h1&gt;
+					&lt;img id=&quot;liveStream&quot; src=&quot;{/animations}/pitstop.gif&quot; rel:auto_play=&quot;1&quot; width=&quot;700&quot; height=&quot;562&quot; rel:rubbable=&quot;1&quot; /&gt;
 					
 					&lt;br&gt;
 					"></core:HTML>
-	
-		
+				</l:HorizontalLayout>
+		<l:VerticalLayout class="sapUiSmallMargin">
 				<core:HTML content="
 		
 					&lt;br&gt;&lt;br&gt;
-&lt;h1&gt;Example with controls and no auto-play&lt;/h1&gt;
-					&lt;img id=&quot;example2&quot; src=&quot;{/animations}/pitstop.gif&quot; rel:auto_play=&quot;1&quot; width=&quot;467&quot; height=&quot;375&quot; rel:rubbable=&quot;1&quot; /&gt;
+&lt;h1&gt;Mini Map&lt;/h1&gt;
+					&lt;img id=&quot;miniMap&quot; src=&quot;{/animations}/race_track_final.gif&quot; rel:auto_play=&quot;1&quot; width=&quot;367&quot; height=&quot;175&quot; rel:rubbable=&quot;1&quot; /&gt;
 					
 					&lt;br&gt;
 					"></core:HTML>
+		<core:HTML content="
+		
+					&lt;br&gt;&lt;br&gt;
+&lt;h1&gt;Heart Rate&lt;/h1&gt;
+					&lt;img id=&quot;heartrage&quot; src=&quot;{/animations}/heartrage.gif&quot; rel:auto_play=&quot;1&quot; width=&quot;367&quot; height=&quot;175&quot; rel:rubbable=&quot;1&quot; /&gt;
+					
+					&lt;br&gt;
+					"></core:HTML>
+					</l:VerticalLayout>
 						</l:HorizontalLayout>
-					
+						<!--<l:HorizontalLayout class="sapUiSmallMargin"> 
 						<core:HTML content="
 		
 					&lt;br&gt;&lt;br&gt;
@@ -43,6 +79,23 @@
 					
 					&lt;br&gt;
 					"></core:HTML>
+					<core:HTML content="
+		
+					&lt;br&gt;&lt;br&gt;
+&lt;h1&gt;Example with controls and no auto-play&lt;/h1&gt;
+					&lt;img id=&quot;example2&quot; src=&quot;{/animations}/pitstop.gif&quot; rel:auto_play=&quot;1&quot; width=&quot;467&quot; height=&quot;375&quot; rel:rubbable=&quot;1&quot; /&gt;
+					
+					&lt;br&gt;
+					"></core:HTML>
+					
+				<core:HTML content="
+		
+					&lt;br&gt;&lt;br&gt;
+					&lt;img id=&quot;liveStream&quot; src=&quot;{/animations}/pitstop.gif&quot; rel:auto_play=&quot;1&quot; width=&quot;467&quot; height=&quot;375&quot; rel:rubbable=&quot;1&quot; /&gt;
+				
+					&lt;br&gt;
+					"></core:HTML>
+					</l:HorizontalLayout>-->
 		</l:VerticalLayout>
 			
 		

@@ -23,6 +23,8 @@ sap.ui.define([
 					liveStream.load();
 					var miniMap = new RubbableGif({ gif: document.getElementById('miniMap') }, "miniMap" );
 					miniMap.load();
+				//	var cockpit = new RubbableGif({ gif: document.getElementById('cockpit') }, "cockpit" );
+				//	cockpit.load();
 			    });
 				
 			});

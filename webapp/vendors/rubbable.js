@@ -57,7 +57,9 @@
 
                 //sup.move_to( Math.floor(progress * (sup.get_length() - 1)) );
                 gifPlayers.forEach(function (element ) {
-                	element.move_to(Math.floor(progress * (element.get_length() - 1)));
+                	if( !element.get_loading()) {
+                		element.move_to(Math.floor(progress * (element.get_length() - 1)));
+                	}
                 });
 
                 startTime = e.timeStamp;

@@ -1,15 +1,16 @@
 <core:View  height="100%" controllerName="com.sap.innojam.pic.controller.MainView" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml"
 	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout">
-	<Page title="{/title}">
+	<Page title="Personalized Interactive Cockpit">
 		<content>
-			<Label text="{/title}"></Label>
-			<Button text="OK" press="onPress"></Button>
+			<Button text="Choose Driver" press="handleOpenDriver"></Button>
+			<Button text="Choose Level Of Interest" press="handleOpenLevel"></Button>
 		
 		<l:VerticalLayout class="sapUiSmallMargin">
 		
 		<l:HorizontalLayout class="sapUiSmallMargin"> 
 		<l:HorizontalLayout class="sapUiSmallMargin"> 
 			<l:VerticalLayout class="sapUiSmallMargin">
+				<Image src="{/images}/cockpit.png" width="128px" height="128px" press="handleOpenDriver"></Image>
 				<core:HTML content="
 		
 					&lt;br&gt;&lt;br&gt;

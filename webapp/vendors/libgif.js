@@ -836,6 +836,10 @@
 		};
 
 		var get_canvas_scale = function() {
+			if(options.gif.currentSrc.indexOf("pitstop.gif") != -1) {
+				return 2;
+			}
+
 			var scale;
 			if (options.max_width && hdr && hdr.width > options.max_width) {
 				scale = options.max_width / hdr.width;

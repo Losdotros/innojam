@@ -1,78 +1,34 @@
-<core:View  height="100%" controllerName="com.sap.innojam.pic.controller.MainView" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml"
-	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout">
+<core:View controllerName="com.sap.innojam.pic.controller.MainView" height="100%" xmlns:core="sap.ui.core"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
 	<Page title="Personalized Interactive Cockpit">
 		<content>
-			<Button text="Choose Driver" press="handleOpenDriver"></Button>
-			<Button text="Choose Level Of Interest" press="handleOpenLevel"></Button>
-		
-		<l:VerticalLayout class="sapUiSmallMargin">
-		
-		<l:HorizontalLayout class="sapUiSmallMargin"> 
-		<l:HorizontalLayout class="sapUiSmallMargin"> 
+			<Button press="handleOpenDriver" text="Choose Driver"></Button>
+			<Button press="handleOpenLevel" text="Choose Level Of Interest"></Button>
 			<l:VerticalLayout class="sapUiSmallMargin">
-				<Image src="{/images}/cockpit.png" width="64px" height="64px" press="onCockpit"></Image>
-				<Image src="{/images}/Drone.png" width="64px" height="64px" press="onDrone"></Image>
-				<Image src="{/images}/racecar.png" width="64px" height="64px" press="onRacecar"></Image>
-				<Image src="{/images}/plus.png" width="64px" height="64px"></Image>
-
-			</l:VerticalLayout>
-				<core:HTML content="
-		
-					&lt;br&gt;&lt;br&gt;
-					&lt;h1&gt;Livestream&lt;/h1&gt;
-					&lt;img id=&quot;liveStream&quot; src=&quot;{/animations}/pitstop.gif&quot; rel:auto_play=&quot;1&quot; width=&quot;700&quot; height=&quot;562&quot; rel:rubbable=&quot;1&quot; /&gt;
-					
-					&lt;br&gt;
-					"></core:HTML>
-				</l:HorizontalLayout>
-		<l:VerticalLayout class="sapUiSmallMargin">
-				<core:HTML content="
-		
-					&lt;br&gt;&lt;br&gt;
-&lt;h1&gt;Mini Map&lt;/h1&gt;
-					&lt;img id=&quot;miniMap&quot; src=&quot;{/animations}/race_track_final.gif&quot; rel:auto_play=&quot;1&quot; width=&quot;367&quot; height=&quot;175&quot; rel:rubbable=&quot;1&quot; /&gt;
-					
-					&lt;br&gt;
-					"></core:HTML>
-		<core:HTML content="
-		
-					&lt;br&gt;&lt;br&gt;
-&lt;h1&gt;Heart Rate&lt;/h1&gt;
-					&lt;img id=&quot;heartrage&quot; src=&quot;{/animations}/heartrage.gif&quot; rel:auto_play=&quot;1&quot; width=&quot;367&quot; height=&quot;175&quot; rel:rubbable=&quot;1&quot; /&gt;
-					
-					&lt;br&gt;
-					"></core:HTML>
+				<l:HorizontalLayout class="sapUiSmallMargin">
+					<l:HorizontalLayout class="sapUiSmallMargin" height="440px" width="640px">
+						<l:VerticalLayout class="sapUiSmallMargin">
+							<Image height="64px" press="onCockpit" src="{/images}/cockpit.png" width="64px"></Image>
+							<Image height="64px" press="onDrone" src="{/images}/Drone.png" width="64px"></Image>
+							<Image height="64px" press="onRacecar" src="{/images}/racecar.png" width="64px"></Image>
+							<Image height="64px" src="{/images}/plus.png" width="64px"></Image>
+						</l:VerticalLayout>
+						<l:VerticalLayout class="sapUiSmallMargin">
+							<core:HTML
+								content=" &lt;h1&gt;Livestream&lt;/h1&gt; &lt;img id=&quot;liveStream&quot; src=&quot;{/animations}/pitstop.gif&quot; rel:auto_play=&quot;1&quot; width=&quot;700&quot; height=&quot;562&quot; rel:rubbable=&quot;1&quot; /&gt; "></core:HTML>
+							<core:HTML
+							content=" &lt;h1&gt;Ranking&lt;/h1&gt;"></core:HTML>
+							<Image height="360px" src="{/images}/table.jpg" width="640px"></Image>
+						</l:VerticalLayout>
+					</l:HorizontalLayout>
+					<l:VerticalLayout class="sapUiSmallMargin">
+						<core:HTML
+							content=" &lt;h1&gt;Mini Map&lt;/h1&gt; &lt;img id=&quot;miniMap&quot; src=&quot;{/animations}/race_track_final.gif&quot; rel:auto_play=&quot;1&quot; width=&quot;367&quot; height=&quot;175&quot; rel:rubbable=&quot;1&quot; /&gt; &lt;br&gt; "></core:HTML>
+						<core:HTML
+							content=" &lt;h1&gt;Heart Rate&lt;/h1&gt; &lt;img id=&quot;heartrage&quot; src=&quot;{/animations}/heartrage.gif&quot; rel:auto_play=&quot;1&quot; width=&quot;367&quot; height=&quot;175&quot; rel:rubbable=&quot;1&quot; /&gt; &lt;br&gt; "></core:HTML>
 					</l:VerticalLayout>
-						</l:HorizontalLayout>
-						<!--<l:HorizontalLayout class="sapUiSmallMargin"> 
-						<core:HTML content="
-		
-					&lt;br&gt;&lt;br&gt;
-&lt;h1&gt;Example with controls and no auto-play&lt;/h1&gt;
-					&lt;img id=&quot;example2&quot; src=&quot;{/animations}/pitstop.gif&quot; rel:auto_play=&quot;1&quot; width=&quot;467&quot; height=&quot;375&quot; rel:rubbable=&quot;1&quot; /&gt;
-					
-					&lt;br&gt;
-					"></core:HTML>
-					<core:HTML content="
-		
-					&lt;br&gt;&lt;br&gt;
-&lt;h1&gt;Example with controls and no auto-play&lt;/h1&gt;
-					&lt;img id=&quot;example2&quot; src=&quot;{/animations}/pitstop.gif&quot; rel:auto_play=&quot;1&quot; width=&quot;467&quot; height=&quot;375&quot; rel:rubbable=&quot;1&quot; /&gt;
-					
-					&lt;br&gt;
-					"></core:HTML>
-					
-				<core:HTML content="
-		
-					&lt;br&gt;&lt;br&gt;
-					&lt;img id=&quot;liveStream&quot; src=&quot;{/animations}/pitstop.gif&quot; rel:auto_play=&quot;1&quot; width=&quot;467&quot; height=&quot;375&quot; rel:rubbable=&quot;1&quot; /&gt;
-				
-					&lt;br&gt;
-					"></core:HTML>
-					</l:HorizontalLayout>-->
-		</l:VerticalLayout>
-			
-		
+				</l:HorizontalLayout>
+			</l:VerticalLayout>
 		</content>
 	</Page>
 </core:View>

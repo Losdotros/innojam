@@ -1,7 +1,7 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/Device",
-	"com.sap.innojam.pic/model/models"
+	"com/sap/innojam/pic/model/models"
 ], function(UIComponent, Device, models) {
 	"use strict";
 
